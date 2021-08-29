@@ -10,8 +10,9 @@ import java.io.PrintWriter;
 public class GetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String value = req.getParameter("name");
         String htmlResponse = "<html><h3>Welcome to the Servlets!</h3><html>";
         PrintWriter writer = resp.getWriter();
-        writer.write(htmlResponse);
+        writer.write(htmlResponse+ " " + value);
     }
 }
