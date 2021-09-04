@@ -66,7 +66,7 @@
                 <span class="footer__description">Sports Center</span>
                 <div>
                     <a href="#" class="footer__social"><i class="bx bxl-facebook"></i></a>
-                    <a href="#" class="footer__social"><i class="bx bxl-instagram"></i></a>
+                    <a href="redirect" class="footer__social"><i class="bx bxl-instagram"></i></a>
                     <a href="#" class="footer__social"><i class="bx bxl-twitter"></i></a>
                 </div>
             </div>
