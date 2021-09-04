@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" type="text/css">
 
     <!--========== CSS ==========-->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Quirk Sports</title>
 </head>
 
@@ -42,18 +43,15 @@
     </header>
     <!--===== MAIN =====-->
     <main class="l-main">
-        <section class="register section bd-container" id="register">
-            <h2 class="section-title">Register</h2>
-            <span class="section-subtitle">Already have an account? <a class="login__link" href="login">Log in!</a></span>
-            <div class="register__container bd-grid">
-                <div class="register__content">
-                    <form  class="register__form" action="registerUser" method="post">
-                        <span class="register__element"><label class="register__form__label">Username</label> <input type="text" name="username" id="username" class="register__form__input"></span>
-                        <span class="register__element"><label class="register__form__label">Password</label> <input type="password" name="password" id="password" class="register__form__input"></span>
-                        <span class="register__element"><label class="register__form__label">First Name</label> <input type="text" name="firstName" id="firstName" class="register__form__input"></span>
-                        <span class="register__element"><label class="register__form__label">Last Name</label> <input type="text" name="lastName" id="lastName" class="register__form__input"></span>
-                        <span class="register__element"><label class="register__form__label">Age</label> <input type="text" name="age" id="age" class="register__form__input"></span>
-                        <span class="register__element__button"><input class="button register__form__button" type="submit" value="Register" id="submit"></span>
+        <section class="login section bd-container" id="login">
+            <h2 class="section-title">Login</h2>
+            <span class="section-subtitle">New to Quirk? <a class="register__link" href="registerUser">Join now!</a></span>
+            <div class="login__container bd-grid">
+                <div class="login__content">
+                    <form  class="login__form" action="loginUser" method="post">
+                        <span class="login__element"><label class="login__form__label">Username</label> <input type="text" name="username" id="username" class="login__form__input"></span>
+                        <span class="login__element"><label class="login__form__label">Password</label> <input type="password" name="password" id="password" class="login__form__input"></span>
+                        <span class="login__element__button"><input class="button login__form__button" type="submit" value="Login" id="submit"></span>
                         <span class="section-subtitle">{0}</span>
                     </form>
                 </div>
@@ -109,7 +107,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--========== MAIN JS ==========-->
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

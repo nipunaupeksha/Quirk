@@ -486,6 +486,72 @@ img {
   margin-left: var(--mb-1);
 }
 
+.register__link{
+  color: var(--first-color-alt);
+}
+
+/*========== LOGIN ===========*/
+.login__link{
+  color: var(--first-color-alt);
+}
+
+.login__container {
+  justify-content: center;
+}
+
+.login__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__element {
+  width: 100%;
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-1);
+  padding-top: var(--mb-1);
+  padding-bottom: var(--mb-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login__element__button{
+  width: 100%;
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-1);
+  padding-top: var(--mb-1);
+  padding-bottom: var(--mb-1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form__button{
+  border: none;
+  font-size: var(--body-font);
+  font-family: "Poppins", sans-serif;
+}
+
+.login__form{
+  padding-top: var(--mb-1);
+  padding-bottom: var(--mb-1);
+}
+
+.login__form__label{
+  width: 40% !important;
+}
+
+.login__form__input{
+  width: 60% !important;
+  margin-right: var(--mb-1);
+  margin-left: var(--mb-1);
+}
+
+
 /*========== FOOTER ==========*/
 .footer__container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -619,6 +685,14 @@ img {
   }
 
   .register__form__label{
+    width: 40% !important;
+  }
+
+  .login__form__input{
+    width: 55% !important;
+  }
+
+  .login__form__label{
     width: 40% !important;
   }
 

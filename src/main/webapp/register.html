@@ -31,6 +31,7 @@
                     <li class="nav__item"><a href="index.jsp#products">Products</a></li>
                     <li class="nav__item"><a href="index.jsp#people">People</a></li>
                     <li class="nav__item"><a href="registerUser">Register</a></li>
+                    <li class="nav__item"><a href="login">Login</a></li>
                     <li><i class="bx bx-moon change-theme" id="theme-button"></i></li>
                 </ul>
             </div>
@@ -43,7 +44,7 @@
     <main class="l-main">
         <section class="register section bd-container" id="register">
             <h2 class="section-title">Register</h2>
-            <span class="section-subtitle">New to quirk? Join now!</span>
+            <span class="section-subtitle">Already have an account? <a class="login__link" href="login">Log in!</a></span>
             <div class="register__container bd-grid">
                 <div class="register__content">
                     <form  class="register__form" action="registerUser" method="post">
@@ -52,7 +53,7 @@
                         <span class="register__element"><label class="register__form__label">First Name</label> <input type="text" name="firstName" id="firstName" class="register__form__input"></span>
                         <span class="register__element"><label class="register__form__label">Last Name</label> <input type="text" name="lastName" id="lastName" class="register__form__input"></span>
                         <span class="register__element"><label class="register__form__label">Age</label> <input type="text" name="age" id="age" class="register__form__input"></span>
-                        <span class="register__element__button"><input class="button register__form__button" type="submit" value="Submit" id="submit"></span>
+                        <span class="register__element__button"><input class="button register__form__button" type="submit" value="Register" id="submit"></span>
                         <span class="section-subtitle">{0}</span>
                     </form>
                 </div>
