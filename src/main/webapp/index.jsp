@@ -32,7 +32,7 @@
                     <li class="nav__item"><a href="#products">Products</a></li>
                     <li class="nav__item"><a href="#people">People</a></li>
                     <li class="nav__item"><a href="#search">Search</a></li>
-                    <li class="nav__item"><a href="login">Login</a></li>
+                    <li class="nav__item"><a href="registerUser">Register</a></li>
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                 </ul>
             </div>
