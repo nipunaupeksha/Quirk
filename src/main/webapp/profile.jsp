@@ -227,7 +227,7 @@
                 </div>
                 <div class="people__content">
                     <img src="./images/jackryan.png" alt="" class="people__img" />
-                    <h3 class="people__title">Jack Ryan</h3>
+                    <h3 class="people__title">${user.firstName} ${user.lastName}</h3>
                     <p class="people__description">Director - Marketing and Sales</p>
                 </div>
             </div>
