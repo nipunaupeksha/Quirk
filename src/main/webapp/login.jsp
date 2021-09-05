@@ -48,6 +48,13 @@
             <span class="section-subtitle">New to Quirk? <a class="register__link" href="registerUser">Join now!</a></span>
             <div class="login__container bd-grid">
                 <div class="login__content">
+                    <%
+                        if(request.getAttribute("error")!=null){
+                    %>
+                    <%=request.getAttribute("error")%>
+                    <%
+                        }
+                    %>
                     <form  class="login__form" action="login" method="post">
                         <span class="login__element"><label class="login__form__label">Username</label> <input type="text" name="username" id="username" class="login__form__input"></span>
                         <span class="login__element"><label class="login__form__label">Password</label> <input type="password" name="password" id="password" class="login__form__input"></span>
