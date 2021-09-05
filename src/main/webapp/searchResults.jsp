@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.example.quirk.beans.Product"%>
+<%@page import="java.util.List"%>
 <html lang="en">
 
 <head>
@@ -47,13 +51,23 @@
             <h2 class="section-title">Products of the week</h2>
             <h3 class="section-subtitle">Items in cart: {4}</h3>
             <div class="products__container bd-grid">
+                <!-- List products using scriptlets and expressions -->
+                <%
+                    List<Product> products = (ArrayList)request.getAttribute("products");
+                    Iterator<Product> iterator = products.iterator();
+                    while (iterator.hasNext()) {
+                        Product product = iterator.next();
+                %>
                 <div class="products__content">
-                    <img src="{0}" alt="" class="products__img">
-                    <h3 class="products__name">{1}</h3>
-                    <span class="products__detail"></span>{2}</span>
-                    <span class="products__price">{3}</span>
+                    <img src="<%=product.getProductImgPath()%>" alt="" class="products__img">
+                    <h3 class="products__name"><%=product.getProductName()%></h3>
+                    <span class="products__detail"></span><%=product.getProductDescription()%></span>
+                    <span class="products__price"><%=product.getProductPrice()%></span>
                     <a href="#" class="button products__button"><i class="bx bx-cart-alt"></i></a>
                 </div>
+                <%
+                    }
+                %>
             </div>
         </section>
     </main>

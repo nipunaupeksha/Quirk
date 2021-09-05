@@ -26,8 +26,10 @@ public class SearchServlet extends HttpServlet {
         List<Product> products = dao.searchProducts(searchString);
 
         // write the product's data back to the client browser
-        String page = getHTMLString(req.getServletContext().getRealPath("./searchResults.html"),products);
-        resp.getWriter().write(page);
+        // String page = getHTMLString(req.getServletContext().getRealPath("./searchResults.html"),products);
+        // resp.getWriter().write(page);
+        req.setAttribute("products", products);
+        req.getRequestDispatcher("./searchResults.jsp").forward(req,resp);
     }
 
     /**
