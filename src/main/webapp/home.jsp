@@ -36,7 +36,7 @@
                     <li class="nav__item"><a href="<%=response.encodeURL("getProfileDetails")%>">Profile</a></li>
                     <li class="nav__item"><a href="#search">Search</a></li>
                     <li class="nav__item"><a href="registerUser">Register</a></li>
-                    <li class="nav__item"><a href="login">Login</a></li>
+                    <li class="nav__item"><a href="logout">Logout</a></li>
                     <li class="nav__item"><a href=""><%=displayDate()%></a></li>
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                 </ul>
