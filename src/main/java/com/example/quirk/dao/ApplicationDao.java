@@ -105,4 +105,32 @@ public class ApplicationDao {
         }
         return isValidUser;
     }
+
+    public User getProfileDetails(String username) {
+        User user = null;
+        try {
+            // get connection to database
+            Connection connection = DBConnection.getConnectionToDatabase();
+
+            // write select query to get profile details
+            String sql = "select * from users where username=?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, username);
+
+            // execute query, get resultSet and return User info
+            ResultSet set = statement.executeQuery();
+            while (set.next()) {
+                user = new User();
+                user.setUsername(set.getString("username"));
+                user.setFirstName(set.getString("firstName"));
+                user.setLastName(set.getString("lastName"));
+                user.setAge(set.getInt("age"));
+            }
+        }
+
+        catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+        return user;
+    }
 }

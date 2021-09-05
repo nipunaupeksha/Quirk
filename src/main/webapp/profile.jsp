@@ -219,9 +219,10 @@
                     <h3 class="people__title">Ashly Carter</h3>
                     <p class="people__description">Director - Product Developement</p>
                 </div>
+                <jsp:useBean id="user" scope="request" type="com.example.quirk.beans.User"></jsp:useBean>
                 <div class="people__content">
                     <img src="./images/willagreene.png" alt="" class="people__img" />
-                    <h3 class="people__title">Willa Greene</h3>
+                    <h3 class="people__title"><jsp:getProperty property="firstName" name="user"/> <jsp:getProperty property="lastName" name="user"/></h3>
                     <p class="people__description">CEO/Founder</p>
                 </div>
                 <div class="people__content">
