@@ -1,5 +1,8 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@page import="java.util.Calendar"%>
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <html lang="en">
 
 <head>
@@ -34,6 +37,7 @@
                     <li class="nav__item"><a href="#search">Search</a></li>
                     <li class="nav__item"><a href="registerUser">Register</a></li>
                     <li class="nav__item"><a href="login">Login</a></li>
+                    <li class="nav__item"><a href=""><%=displayDate()%></a></li>
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                 </ul>
             </div>
@@ -283,6 +287,14 @@
 
         <p class="footer__copy">&#169; 2020 Nipuna Upeksha. All right reserved</p>
     </footer>
+    <%!
+        public String displayDate(){
+            SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd hh:mm");
+            Date date = Calendar.getInstance().getTime();
+            return dateFormat.format(date);
+        }
+
+    %>
     <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
