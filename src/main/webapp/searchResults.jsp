@@ -49,7 +49,17 @@
         <section class="products section bd-container" id="products">
             <span class="section-subtitle">Special</span>
             <h2 class="section-title">Products of the week</h2>
-            <h3 class="section-subtitle">Items in cart: {4}</h3>
+            <%
+                if(session.getAttribute("cart")!=null){
+            %>
+            <h3 class="section-subtitle">Items in cart: <%=((ArrayList)session.getAttribute("cart")).size()%></h3>
+            <%
+                }else{
+            %>
+            <h3 class="section-subtitle">Items in cart: 0</h3>
+            <%
+                }
+            %>
             <div class="products__container bd-grid">
                 <!-- List products using scriptlets and expressions -->
                 <%
@@ -58,13 +68,15 @@
                     while (iterator.hasNext()) {
                         Product product = iterator.next();
                 %>
-                <div class="products__content">
-                    <img src="<%=product.getProductImgPath()%>" alt="" class="products__img">
-                    <h3 class="products__name"><%=product.getProductName()%></h3>
-                    <span class="products__detail"></span><%=product.getProductDescription()%></span>
-                    <span class="products__price"><%=product.getProductPrice()%></span>
-                    <a href="#" class="button products__button"><i class="bx bx-cart-alt"></i></a>
-                </div>
+                <form action="addProducts" method="get">
+                    <div class="products__content">
+                        <img src="<%=product.getProductImgPath()%>" alt="" class="products__img">
+                        <h3 class="products__name"><%=product.getProductName()%></h3>
+                        <span class="products__detail"><%=product.getProductDescription()%></span>
+                        <span class="products__price"><%=product.getProductPrice()%></span>
+                        <button href="#" class="button products__button"><i class="bx bx-cart-alt"></i></button>
+                    </div>
+                </form>
                 <%
                     }
                 %>

@@ -401,6 +401,7 @@ img {
   display: flex;
   padding: 0.625rem 0.813rem;
   border-radius: 0.5rem 0 0.5rem 0;
+  border: none;
 }
 
 /*========== SEARCH ==========*/
