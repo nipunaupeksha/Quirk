@@ -74,7 +74,8 @@
                         <h3 class="products__name"><%=product.getProductName()%></h3>
                         <span class="products__detail"><%=product.getProductDescription()%></span>
                         <span class="products__price"><%=product.getProductPrice()%></span>
-                        <button href="#" class="button products__button"><i class="bx bx-cart-alt"></i></button>
+                        <input hidden type="text" name="product" value="<%=product.getProductName()%>">
+                        <button class="button products__button"><i class="bx bx-cart-alt"></i></button>
                     </div>
                 </form>
                 <%
