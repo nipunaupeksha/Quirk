@@ -31,6 +31,28 @@ public class ApplicationDao {
       return products;
     }
 
+    public List<Product> searchProducts(String searchString, Connection conn){
+        Product product = null;
+        List<Product> products = new ArrayList<>();
+        try{
+            String sql = "select * from products where productName like '%"+searchString+"%'";
+            Statement stm = conn.createStatement();
+            ResultSet rst = stm.executeQuery(sql);
+            while(rst.next()){
+                product = new Product();
+                product.setProductId(rst.getInt("productId"));
+                product.setProductName(rst.getString("productName"));
+                product.setProductDescription(rst.getString("productDescription"));
+                product.setProductPrice(rst.getString("productPrice"));
+                product.setProductImgPath(rst.getString("productImgPath"));
+                products.add(product);
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return products;
+    }
+
     public int registerUser(User user) {
         int rowsAffected = 0;
 
